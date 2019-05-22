@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\Utilities">
+      <UniqueIdentifier>{18cf8074-b65a-4667-b6e2-d4ce0fff1b23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Utilities">
+      <UniqueIdentifier>{175dfb4b-c37b-440d-b437-1d31a093fa0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Geometric Objects">
+      <UniqueIdentifier>{fe01fbfb-18e2-4d93-b9fc-f23a14c415dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Geometric Objects">
+      <UniqueIdentifier>{fddb2af3-013e-472c-a629-1f82fc1db990}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Materials">
+      <UniqueIdentifier>{4c5b3fef-e4fa-4a74-aff2-bf23d2e0baf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Materials">
+      <UniqueIdentifier>{cfc33c4d-2ea1-41e7-9b9e-c223de7a533a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Geometric Objects\Primitives">
+      <UniqueIdentifier>{e4242129-b3d2-475a-a483-4cad51ae77f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Geometric Objects\Primitives">
+      <UniqueIdentifier>{d1629416-e0b9-4e9b-9b7a-cc285b75e297}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Tracers">
+      <UniqueIdentifier>{19d8ce7e-ab81-4830-bac7-fad400f769d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Tracers">
+      <UniqueIdentifier>{4b59d954-d498-4367-934a-36fbc9fdb12d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\World">
+      <UniqueIdentifier>{801df71b-80ce-4855-9d08-399b8cb0cba5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\World">
+      <UniqueIdentifier>{cd4ba3b2-9a47-4454-8723-2920070c26c3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RGBColor.cpp">
+      <Filter>源文件\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Normal.cpp">
+      <Filter>源文件\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix.cpp">
+      <Filter>源文件\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector3D.cpp">
+      <Filter>源文件\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Point3D.cpp">
+      <Filter>源文件\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Ray.cpp">
+      <Filter>源文件\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="ShadeRec.cpp">
+      <Filter>源文件\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="GeometricObject.cpp">
+      <Filter>源文件\Geometric Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="BBox.cpp">
+      <Filter>源文件\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Material.cpp">
+      <Filter>源文件\Materials</Filter>
+    </ClCompile>
+    <ClCompile Include="Sphere.cpp">
+      <Filter>源文件\Geometric Objects\Primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="Tracer.cpp">
+      <Filter>源文件\Tracers</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleSphere.cpp">
+      <Filter>源文件\Tracers</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>源文件\World</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewPlane.cpp">
+      <Filter>源文件\World</Filter>
+    </ClCompile>
+    <ClCompile Include="PaintArea.cpp">
+      <Filter>源文件\Utilities</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Constants.h">
+      <Filter>头文件\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="RGBColor.h">
+      <Filter>头文件\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Normal.h">
+      <Filter>头文件\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>头文件\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector3D.h">
+      <Filter>头文件\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Point3D.h">
+      <Filter>头文件\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Ray.h">
+      <Filter>头文件\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="ShadeRec.h">
+      <Filter>头文件\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="GeometricObject.h">
+      <Filter>头文件\Geometric Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="BBox.h">
+      <Filter>头文件\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
+      <Filter>头文件\Materials</Filter>
+    </ClInclude>
+    <ClInclude Include="Sphere.h">
+      <Filter>头文件\Geometric Objects\Primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="Tracer.h">
+      <Filter>头文件\Tracers</Filter>
+    </ClInclude>
+    <ClInclude Include="SingleSphere.h">
+      <Filter>头文件\Tracers</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>头文件\World</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewPlane.h">
+      <Filter>头文件\World</Filter>
+    </ClInclude>
+    <ClInclude Include="Maths.h">
+      <Filter>头文件\Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="PaintArea.h">
+      <Filter>头文件\Utilities</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
