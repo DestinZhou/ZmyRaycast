@@ -59,3 +59,4 @@ GeometricObject::set_material(Material* mPtr) {
 }
 
 
+

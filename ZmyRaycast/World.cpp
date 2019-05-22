@@ -7,6 +7,7 @@
 
 // tracers
 #include "SingleSphere.h"
+#include "MultipleObjects.h"
 
 // utilities
 #include "Vector3D.h"
@@ -33,6 +34,8 @@ World::~World(void) {
 		delete tracer_ptr;
 		tracer_ptr = NULL;
 	}
+
+	delete_objects();
 }
 
 
@@ -145,11 +148,64 @@ World::build(void) {
 	// 背景色
 	background_color = black;
 
+	/* single object */
+	/*
 	// 跟踪器
 	tracer_ptr = new SingleSphere(this);
 
 	// 绘制球体
 	sphere.set_center(0.0);
 	sphere.set_radius(85.0);
+	*/
+
+	/* multi object*/
+	tracer_ptr = new MultipleObjects(this);
+
+	Sphere* sphere_ptr = new Sphere;
+	sphere_ptr->set_center(0, -25, 0);
+	sphere_ptr->set_radius(80.0);
+	sphere_ptr->set_color(1, 0, 0);  // red
+	add_object(sphere_ptr);
+
+	sphere_ptr = new Sphere(Point3D(0, 30, 0), 60);
+	sphere_ptr->set_color(1, 1, 0);	// yellow
+	add_object(sphere_ptr);
 }
 
+// delete_objects
+
+// Deletes the objects in the objects array, and erases the array.
+// The objects array still exists, because it's an automatic variable, but it's empty 
+
+void
+World::delete_objects(void) {
+	int num_objects = objects.size();
+
+	for (int j = 0; j < num_objects; j++) {
+		delete objects[j];
+		objects[j] = NULL;
+	}
+
+	objects.erase(objects.begin(), objects.end());
+}
+
+// hit_bare_bones_objects  计算光线与场景中的全部物体的相交检测，记录到ShadeRec中
+
+ShadeRec
+World::hit_bare_bones_objects(const Ray& ray)  {
+
+	ShadeRec	sr(*this);
+	double		t;
+	double		tmin = kHugeValue;
+	int 		num_objects = objects.size();
+
+	// 遍历全部物体，计算最近的相交点，记录数据到shadeRec中
+	for (int j = 0; j < num_objects; j++)
+		if (objects[j]->hit(ray, t, sr) && (t < tmin)) {
+			sr.hit_an_object = true;
+			tmin = t;
+			sr.color = objects[j]->get_color();
+		}
+
+	return(sr);
+}
